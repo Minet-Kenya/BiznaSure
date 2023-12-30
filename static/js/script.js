@@ -50,8 +50,6 @@ window.addEventListener("resize", () => {
 	distance = window.innerHeight - selectHeader.getBoundingClientRect().bottom;
 });
 
-
-
 /**
  * Apply .scrolled class to the body as the page is scrolled down
  */
@@ -65,7 +63,6 @@ const selectLogo = document.querySelector("#header .header-logo");
 const selectMinet = document.querySelector(".minet");
 const selectEndorseWhite = document.querySelector(".aon-white");
 
-
 function toggleScrolled() {
 	let viewportHeight = window.innerHeight;
 	let headerHeight = selectHeader.offsetHeight;
@@ -73,7 +70,6 @@ function toggleScrolled() {
 
 	if (window.scrollY >= scrollLength) {
 		selectBody.classList.add("scrolled");
-		selectNav.classList.remove("text-uppercase");
 
 		selectToggle.classList.remove("text-white");
 		selectToggle.classList.add("text-secondary");
@@ -89,7 +85,6 @@ function toggleScrolled() {
 		}
 	} else {
 		selectBody.classList.remove("scrolled");
-		selectNav.classList.add("text-uppercase");
 
 		selectToggle.classList.add("text-white");
 		selectToggle.classList.remove("text-secondary");
@@ -105,7 +100,6 @@ function toggleScrolled() {
 		selectEndorseWhite.classList.remove("d-none");
 	}
 }
-
 document.addEventListener("scroll", toggleScrolled);
 window.addEventListener("load", toggleScrolled);
 
@@ -123,11 +117,9 @@ function mobileNavToogle() {
 	if (selectBody.classList.contains("mobile-nav-active")) {
 		selectNavMenu.classList.remove("col-6");
 		selectNavMenu.classList.add("col-12");
-		selectNav.classList.remove("text-uppercase");
 	} else {
 		selectNavMenu.classList.add("col-6");
 		selectNavMenu.classList.remove("col-12");
-		selectNav.classList.add("text-uppercase");
 	}
 }
 mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
@@ -142,6 +134,26 @@ document.querySelectorAll('#navmenu a').forEach(navmenu => {
 		}
 	});
 });
+
+/**
+ * Automatically update copyright year
+ */
+async function getCurrentYear() {
+	try {
+		let response = await fetch("http://worldtimeapi.org/api/timezone/Etc/UTC");
+		let data = await response.json();
+
+		const currentYear = new Date(data.utc_datetime).getFullYear();
+		const selectYear = document.querySelector("#footer .copyright .current-year");
+
+		if (currentYear <= 2023) { return; }
+		selectYear.textContent += ` - ${currentYear}`;
+
+	} catch (error) {
+		console.error("Error fetching data from WorldTimeAPI:", error);
+	}
+}
+getCurrentYear();
 
 /**
  * Initiate glightbox
@@ -166,5 +178,4 @@ window.addEventListener("load", aosInit);
 /**
  * urlParams
  */
-let urlParams = new URLSearchParams(window.location.search);
-
+// let urlParams = new URLSearchParams(window.location.search);
