@@ -6,10 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>BiznaSure</title>
-	<meta name="description"
-		content="Learn how to protect your business from various risks with Minet's comprehensive insurance solutions. Get a free quote today!">
-	<meta name="keywords"
-		content="business insurance, risk management, insurance solutions, free quote, Minet Kenya Insurance Brokers Limited, Minet Kenya">
+	<meta name="description" content="Learn how to protect your business from various risks with Minet's comprehensive insurance solutions. Get a free quote today!">
+	<meta name="keywords" content="business insurance, risk management, insurance solutions, free quote, Minet Kenya Insurance Brokers Limited, Minet Kenya">
 
 	<!-- Manifest -->
 	<link rel="manifest" href="static/manifest.webmanifest">
@@ -40,11 +38,9 @@
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
 
 	<!-- ======= Hero Section ======= -->
-	<section id="hero"
-		class="position-relative text-white w-100 py-0 d-flex justify-content-center align-items-center min-vh-100">
+	<section id="hero" class="position-relative text-white w-100 py-0 d-flex justify-content-center align-items-center min-vh-100">
 
-		<img src="static/img/hero-bg.jpg" class="position-absolute w-100 h-100 d-block" width="" height="" alt=""
-			data-aos="fade-in">
+		<img src="static/img/hero-bg.jpg" class="position-absolute w-100 h-100 d-block" width="" height="" alt="" data-aos="fade-in">
 
 		<a href="index.html" class="z-2 hero-logo d-flex align-items-center position-absolute top-0 m-4">
 			<img src="static/img/logo.png" class="img-fluid" width="" height="" alt="logo">
@@ -92,8 +88,7 @@
 					</nav><!-- End Nav Menu -->
 
 					<a href="index.html" class="endorse d-flex align-items-center col-3">
-						<img src="static/img/aon-correspondent-white.png" class="img-fluid aon-white" width="" height=""
-							alt="">
+						<img src="static/img/aon-correspondent-white.png" class="img-fluid aon-white" width="" height="" alt="">
 						<img src="static/img/minet.png" class="img-fluid minet d-none" width="" height="" alt="">
 					</a>
 
@@ -123,8 +118,50 @@
 	</main>
 
 	<!-- ======= Footer ======= -->
-	<footer id="footer">
+	<footer id="footer" class="bg-light">
 		<!-- <img src="static/img/aon-correspondent.png" class="img-fluid aon d-none" width="" height="" alt=""> -->
+		<div class="container footer-top">
+			<div class="row gy-4">
+				<div class="col-lg-8 d-flex flex-column justify-content-center align-items-center d-lg-block footer-about">
+					<a href="index.html" class="logo d-flex align-items-center">
+						<span>Risk. Reinsurance. People</span>
+					</a>
+					<p>
+						Minet is a trusted pan-African advisor that meets the uncertainties of tomorrow by delivering
+						risk and human capital solutions today.
+					</p>
+					<div class="social-links d-flex mt-4">
+						<a href="https://twitter.com/Minet_Kenya/" target="_blank"><i class="bi bi-twitter-x"></i></a>
+						<a href="https://www.facebook.com/MinetKenya/" target="_blank"><i class="bi bi-facebook"></i></a>
+						<a href="https://www.instagram.com/minet_ke/" target="_blank"><i class="bi bi-instagram"></i></a>
+						<a href="https://www.linkedin.com/company/minet-kenya-insurance-brokers-limited" target="_blank"><i class="bi bi-linkedin"></i></a>
+					</div>
+				</div>
+				<div class="col-lg-4 footer-contact text-center text-md-start">
+					<h4>Contact Us</h4>
+					<p>Minet House, Processional Way, off Nyerere Road</p>
+					<p>P.O. Box 48279-00100, GPO Nairobi</p>
+					<p>Kenya</p>
+					<p class="mt-4">
+						<strong>Phone:</strong> <span>+254 071 904 4000</span>
+					</p>
+					<p>
+						<strong>Email:</strong> <span>info@minet.com</span>
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class="container copyright text-center mt-4">
+			<p>
+				<?php
+				$year = date("Y");
+				echo "<p><span>All rights reserved</span> ©️ <strong class='px-1'>Minet Group</strong> <span>$year</span></p>";
+				?>
+
+			<div class="credits">
+				Designed by <a href="#" class="pe-none">Minet Kenya IT Department</a>
+			</div>
+		</div>
 	</footer><!-- End Footer -->
 
 	<!-- Back To Top Button -->

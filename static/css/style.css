@@ -389,6 +389,131 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+	font-size: 14px;
+	padding-bottom: 50px;
+	background-color: #f4f4f4;
+  }
+  
+  #footer .footer-top {
+	padding-top: 50px;
+  }
+  
+  #footer .footer-about .logo {
+	line-height: 0;
+	margin-bottom: 25px;
+  }
+  
+  #footer .footer-about .logo span {
+	color: var(--bs-secondary);
+	font-size: 30px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-family: var(--font-primary);
+  }
+  
+  @media (max-width: 767.98px) {
+	#footer .footer-about .logo span {
+	  font-size: 26px;
+	}
+  }
+  
+  #footer .footer-about p {
+	font-size: 14px;
+	font-family: var(--font-secondary);
+  }
+  
+  @media (max-width: 991.98px) {
+	#footer .footer-about p {
+	  text-align: center;
+	}
+  }
+  
+  #footer .social-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	border: 1px solid rgba(var(--bs-dark-rgb), 0.5);
+	font-size: 16px;
+	color: rgba(var(--bs-dark-rgb), 0.5);
+	margin-right: 10px;
+	transition: 0.3s;
+  }
+  
+  #footer .social-links a:hover {
+	color: var(--bs-primary);
+	border-color: var(--bs-primary);
+  }
+  
+  #footer h4 {
+	color: var(--bs-secondary);
+	font-size: 16px;
+	font-weight: bold;
+	position: relative;
+	padding-bottom: 12px;
+  }
+  
+  #footer .footer-links {
+	margin-bottom: 30px;
+  }
+  
+  #footer .footer-links ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+  }
+  
+  #footer .footer-links ul i {
+	padding-right: 2px;
+	font-size: 12px;
+	line-height: 0;
+  }
+  
+  #footer .footer-links ul li {
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+  }
+  
+  #footer .footer-links ul li:first-child {
+	padding-top: 0;
+  }
+  
+  #footer .footer-links ul a {
+	color: rgba(var(--bs-dark-rgb), 0.8);
+	display: inline-block;
+	line-height: 1;
+  }
+  
+  #footer .footer-links ul a:hover {
+	color: var(--bs-primary);
+  }
+  
+  #footer .footer-contact p {
+	margin-bottom: 5px;
+  }
+  
+  #footer .copyright {
+	padding-top: 25px;
+	padding-bottom: 25px;
+	background-color: #eaeaea;
+  }
+  
+  #footer .copyright p {
+	margin-bottom: 0;
+  }
+  
+  #footer .credits {
+	margin-top: 6px;
+	font-size: 13px;
+  }
+
+/*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
 #preloader:before {
