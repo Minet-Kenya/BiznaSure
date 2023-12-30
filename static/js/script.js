@@ -39,8 +39,18 @@ if (backtotop) {
  * Move header up to the hero section
  */
 const selectHeader = document.querySelector("#header");
-let headerHeight = selectHeader.offsetHeight;
+let headerHeight = selectHeader.offsetHeight + 24;
 selectHeader.style.marginTop = -headerHeight + "px";
+let distance = window.innerHeight - selectHeader.getBoundingClientRect().bottom;
+
+window.addEventListener("resize", () => {
+	headerHeight = selectHeader.offsetHeight + 24;
+	selectHeader.style.marginTop = -headerHeight + "px";
+
+	distance = window.innerHeight - selectHeader.getBoundingClientRect().bottom;
+});
+
+
 
 /**
  * Apply .scrolled class to the body as the page is scrolled down
@@ -57,7 +67,6 @@ const selectEndorseWhite = document.querySelector(".aon-white");
 
 
 function toggleScrolled() {
-	if (!selectHeader.classList.contains("sticky-top")) return;
 	let viewportHeight = window.innerHeight;
 	let headerHeight = selectHeader.offsetHeight;
 	let scrollLength = viewportHeight - headerHeight;
@@ -104,11 +113,22 @@ window.addEventListener("load", toggleScrolled);
  * Mobile nav toggle
  */
 const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
+const selectNavMenu = document.getElementById("navmenu");
 
 function mobileNavToogle() {
 	document.querySelector('body').classList.toggle('mobile-nav-active');
 	mobileNavToggleBtn.classList.toggle('bi-list');
 	mobileNavToggleBtn.classList.toggle('bi-x');
+
+	if (selectBody.classList.contains("mobile-nav-active")) {
+		selectNavMenu.classList.remove("col-6");
+		selectNavMenu.classList.add("col-12");
+		selectNav.classList.remove("text-uppercase");
+	} else {
+		selectNavMenu.classList.add("col-6");
+		selectNavMenu.classList.remove("col-12");
+		selectNav.classList.add("text-uppercase");
+	}
 }
 mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
 
@@ -121,7 +141,6 @@ document.querySelectorAll('#navmenu a').forEach(navmenu => {
 			mobileNavToogle();
 		}
 	});
-
 });
 
 /**

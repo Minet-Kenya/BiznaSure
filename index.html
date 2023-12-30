@@ -40,7 +40,8 @@
 <body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
 
 	<!-- ======= Hero Section ======= -->
-	<section id="hero" class="position-relative text-white h-100 py-0">
+	<section id="hero"
+		class="position-relative text-white w-100 py-0 d-flex justify-content-center align-items-center min-vh-100">
 
 		<img src="static/img/hero-bg.jpg" class="position-absolute w-100 h-100 d-block" width="" height="" alt=""
 			data-aos="fade-in">
@@ -65,36 +66,38 @@
 	</section><!-- End Hero -->
 
 	<!-- ======= Header ======= -->
-	<header id="header" class="header sticky-top d-flex align-items-center z-2">
-		<div class="container-fluid">
-			<div class="row">
+	<header id="header" class="z-2 sticky-top w-100">
+		<div class="header-container d-flex align-items-center">
+			<div class="container-fluid">
+				<div class="row">
 
-				<div class="col-xl-3 d-none d-xl-flex align-items-center justify-content-center">
-					<p class="slogan text-white mb-0 fs-5">Risk. Reinsurance. People.</p>
-					<a href="index.html#" class="header-logo d-none">
-						<img src="static/img/logo.png" class="img-fluid" width="" height="" alt="logo">
+					<div class="col-3 d-flex align-items-center justify-content-center">
+						<p class="slogan text-white mb-0 fs-5">Risk. Reinsurance. People.</p>
+						<a href="index.html#" class="header-logo d-none">
+							<img src="static/img/logo.png" class="img-fluid" width="" height="" alt="logo">
+						</a>
+					</div>
+
+					<!-- Nav Menu -->
+					<nav id="navmenu" class="p-0 col-6 d-flex align-items-center justify-content-center">
+						<ul class="m-xl-0 p-xl-0 d-xl-flex list-unstyled align-items-xl-center text-uppercase">
+							<li><a href="index.html#hero" class="link-secondary active">Home</a></li>
+							<li><a href="index.html#about" class="link-secondary">About</a></li>
+							<li><a href="index.html#services" class="link-secondary">Products & Services</a></li>
+							<li><a href="index.html#media" class="link-secondary">Media</a></li>
+							<li><a href="index.html#contact" class="link-secondary">Contact</a></li>
+						</ul>
+
+						<i class="mobile-nav-toggle d-block d-xl-none bi bi-list"></i>
+					</nav><!-- End Nav Menu -->
+
+					<a href="index.html" class="endorse d-flex align-items-center col-3">
+						<img src="static/img/aon-correspondent-white.png" class="img-fluid aon-white" width="" height=""
+							alt="">
+						<img src="static/img/minet.png" class="img-fluid minet d-none" width="" height="" alt="">
 					</a>
+
 				</div>
-
-				<!-- Nav Menu -->
-				<nav id="navmenu" class="p-0 col col-xl-6 d-flex align-items-center justify-content-center">
-					<ul class="m-xl-0 p-xl-0 d-xl-flex list-unstyled align-items-xl-center text-uppercase">
-						<li><a href="index.html#hero" class="link-secondary active">Home</a></li>
-						<li><a href="index.html#about" class="link-secondary">About</a></li>
-						<li><a href="index.html#services" class="link-secondary">Products & Services</a></li>
-						<li><a href="index.html#media" class="link-secondary">Media</a></li>
-						<li><a href="index.html#contact" class="link-secondary">Contact</a></li>
-					</ul>
-
-					<i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-				</nav><!-- End Nav Menu -->
-
-				<a href="index.html" class="endorse d-none d-xl-flex align-items-center col-xl-3">
-					<img src="static/img/aon-correspondent-white.png" class="img-fluid aon-white" width="" height=""
-						alt="">
-					<img src="static/img/minet.png" class="img-fluid minet d-none" width="" height="" alt="">
-				</a>
-
 			</div>
 		</div>
 	</header><!-- End Header -->
