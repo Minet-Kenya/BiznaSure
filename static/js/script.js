@@ -140,7 +140,7 @@ document.querySelectorAll('#navmenu a').forEach(navmenu => {
  */
 async function getCurrentYear() {
 	try {
-		let response = await fetch("http://worldtimeapi.org/api/timezone/Etc/UTC");
+		let response = await fetch("https://worldtimeapi.org/api/timezone/Etc/UTC");
 		let data = await response.json();
 
 		const currentYear = new Date(data.utc_datetime).getFullYear();
