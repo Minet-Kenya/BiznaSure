@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-# My Custom Boostrap
+# Custom Boostrap
 # Help: https://getbootstrap.com/docs/5.3/customize/sass/
 --------------------------------------------------------------*/
 
@@ -36,21 +36,12 @@ $secondary-rgb: 50, 53, 58;
 @import "../vendor/bootstrap/scss/images";
 @import "../vendor/bootstrap/scss/containers";
 @import "../vendor/bootstrap/scss/grid";
+@import "../vendor/bootstrap/scss/forms";
 @import "../vendor/bootstrap/scss/helpers";
 
 /* Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 ------------------------------*/
 @import "../vendor/bootstrap/scss/utilities/api";
-
-
-/*--------------------------------------------------------------
-# Disable aos animation delay on mobile devices
---------------------------------------------------------------*/
-@media screen and (max-width: 767.98px) {
-	[data-aos-delay] {
-		transition-delay: 0 !important;
-	}
-}
 
 
 /*--------------------------------------------------------------
@@ -72,18 +63,15 @@ $secondary-rgb: 50, 53, 58;
 }
 
 :root {
+	--bs-tertiary: #176d6a;
+	--bs-tertiary-rgb: 23, 109, 106;
 	--font-default: "Titillium-Regular", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--font-primary: "preloslab-medium-bold", sans-serif;
 	--font-secondary: "preloslab-medium-regular", sans-serif;
 }
 
-:root {
-	--bs-tertiary: #176d6a;
-	--bs-tertiary-rgb: 23, 109, 106;
-}
-
-$tertiary: --bs-tertiary;
-$tertiary-rgb: --bs-tertiary-rgb;
+$tertiary: #176d6a;
+$tertiary-rgb: 23, 109, 106;
 
 .text-tertiary {
 	color: $tertiary;
@@ -93,6 +81,15 @@ $tertiary-rgb: --bs-tertiary-rgb;
 	background-color: $tertiary;
 }
 
+
+/*--------------------------------------------------------------
+# Disable aos animation delay on mobile devices
+--------------------------------------------------------------*/
+@media screen and (max-width: 767.98px) {
+	[data-aos-delay] {
+		transition-delay: 0 !important;
+	}
+}
 
 /*--------------------------------------------------------------
 # General
