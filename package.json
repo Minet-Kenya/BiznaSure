@@ -1,0 +1,20 @@
+{
+  "name": "biznasure",
+  "version": "1.0.0",
+  "description": "Minet's BiznaSure offers tailored insurance cover for small and medium enterprises (SMEs) in Kenya.",
+  "scripts": {
+    "watch": "sass --watch ./static/scss/style.scss ./static/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WaksKevin/BiznaSure.git"
+  },
+  "keywords": ["business insurance, risk management, insurance solutions, free quote, Minet Kenya Insurance Brokers Limited, Minet Kenya"],
+  "author": "Kevin Wakhisi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WaksKevin/BiznaSure/issues"
+  },
+  "homepage": "https://github.com/WaksKevin/BiznaSure#readme"
+}
+
