@@ -17,9 +17,13 @@ if (backtotop) {
 		if (window.scrollY > 100) {
 			backtotop.classList.remove("invisible");
 			backtotop.classList.add("visible");
+			backtotop.classList.remove("opacity-0");
+			backtotop.classList.add("opacity-100");
 		} else {
 			backtotop.classList.remove("visible");
 			backtotop.classList.add("invisible");
+			backtotop.classList.remove("opacity-100");
+			backtotop.classList.add("opacity-0");
 		}
 	};
 
@@ -36,72 +40,18 @@ if (backtotop) {
 }
 
 /**
- * Move header up to the hero section
- */
-const selectHeader = document.querySelector("#header");
-let headerHeight = selectHeader.offsetHeight + 24;
-selectHeader.style.marginTop = -headerHeight + "px";
-let distance = window.innerHeight - selectHeader.getBoundingClientRect().bottom;
-
-window.addEventListener("resize", () => {
-	headerHeight = selectHeader.offsetHeight + 24;
-	selectHeader.style.marginTop = -headerHeight + "px";
-
-	distance = window.innerHeight - selectHeader.getBoundingClientRect().bottom;
-});
-
-/**
  * Apply .scrolled class to the body as the page is scrolled down
  */
 const selectBody = document.querySelector("body");
-const selectNav = document.querySelector("#navmenu ul");
-const selectToggle = document.querySelector("#navmenu .mobile-nav-toggle");
-
-const selectSlogan = document.querySelector("#header .slogan");
-const selectLogo = document.querySelector("#header .header-logo");
-
-const selectMinet = document.querySelector(".minet");
-const selectEndorseWhite = document.querySelector(".aon-white");
+const selectNavBar = document.querySelector('#navbar');
 
 function toggleScrolled() {
-	let viewportHeight = window.innerHeight;
-	let headerHeight = selectHeader.offsetHeight;
-	let scrollLength = viewportHeight - headerHeight;
-
-	if (window.scrollY >= scrollLength) {
-		selectBody.classList.add("scrolled");
-
-		selectToggle.classList.remove("text-white");
-		selectToggle.classList.add("text-secondary");
-
-		selectLogo.classList.remove("d-none");
-		if (!selectSlogan.classList.contains("d-none")) {
-			selectSlogan.classList.add("d-none");
-		}
-
-		selectMinet.classList.remove("d-none");
-		if (!selectEndorseWhite.classList.contains("d-none")) {
-			selectEndorseWhite.classList.add("d-none");
-		}
-	} else {
-		selectBody.classList.remove("scrolled");
-
-		selectToggle.classList.add("text-white");
-		selectToggle.classList.remove("text-secondary");
-
-		if (!selectLogo.classList.contains("d-none")) {
-			selectLogo.classList.add("d-none");
-		}
-		selectSlogan.classList.remove("d-none");
-
-		if (!selectMinet.classList.contains("d-none")) {
-			selectMinet.classList.add("d-none");
-		}
-		selectEndorseWhite.classList.remove("d-none");
-	}
+	if (!selectNavBar.classList.contains('fixed-top')) return;
+	window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
 }
-document.addEventListener("scroll", toggleScrolled);
-window.addEventListener("load", toggleScrolled);
+
+document.addEventListener('scroll', toggleScrolled);
+window.addEventListener('load', toggleScrolled);
 
 /**
  * Mobile nav toggle
@@ -117,6 +67,7 @@ function mobileNavToogle() {
 	if (selectBody.classList.contains("mobile-nav-active")) {
 		selectNavMenu.classList.remove("col-6");
 		selectNavMenu.classList.add("col-12");
+		// selectNavMenu.classList.add("z-3");
 	} else {
 		selectNavMenu.classList.add("col-6");
 		selectNavMenu.classList.remove("col-12");

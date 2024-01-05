@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Minet's BiznaSure offers tailored insurance cover for small and medium enterprises (SMEs) in Kenya.",
   "scripts": {
-    "watch": "sass --watch ./static/scss/custom.scss ./static/vendor/bootstrap/bootstrap.custom.min.css --style compressed"
+    "watch-custom": "sass --watch ./static/scss/custom.scss ./static/vendor/bootstrap/bootstrap.custom.min.css --style compressed",
+    "watch-style": "sass --watch ./static/scss/style.scss ./static/css/style.css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -17,4 +18,3 @@
   },
   "homepage": "https://github.com/WaksKevin/BiznaSure#readme"
 }
-
