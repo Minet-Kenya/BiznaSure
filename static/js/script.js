@@ -9,48 +9,82 @@ if (preloader) {
 }
 
 /**
- * Back to top button
+ * Chat button
  */
-const backtotop = document.querySelector("#back-to-top");
-if (backtotop) {
-	const toggleBacktotop = () => {
-		if (window.scrollY > 100) {
-			backtotop.classList.remove("invisible");
-			backtotop.classList.add("visible");
-			backtotop.classList.remove("opacity-0");
-			backtotop.classList.add("opacity-100");
-		} else {
-			backtotop.classList.remove("visible");
-			backtotop.classList.add("invisible");
-			backtotop.classList.remove("opacity-100");
-			backtotop.classList.add("opacity-0");
-		}
-	};
+const chat = document.querySelector(".chat");
+const chattext = document.querySelector(".chat span");
+let chattimeoutid;
 
-	window.addEventListener("load", toggleBacktotop);
-	window.addEventListener("scroll", toggleBacktotop);
+if (chat) {
+	chat.addEventListener("mouseenter", () => {
+		chattext.classList.remove("d-none");
+		chattimeoutid = setTimeout(() => {
+			chattext.classList.remove("invisible");
+		}, 200);
 
-	backtotop.addEventListener("click", (e) => {
-		e.preventDefault();
-		window.scrollTo({
-			top: 0,
-			behavior: "smooth"
+		chat.addEventListener("mouseleave", () => {
+			clearTimeout(chattimeoutid);
+			chattext.classList.add("d-none");
+			chattext.classList.add("invisible");
 		});
 	});
 }
 
 /**
+ * Side button
+ */
+const backtotop = document.querySelector("#back-to-top");
+
+const togglesideButtons = () => {
+	if (window.scrollY > 100) {
+		chat.classList.remove("invisible");
+		chat.classList.add("visible");
+		chat.classList.remove("opacity-0");
+		chat.classList.add("opacity-100");
+
+		backtotop.classList.remove("invisible");
+		backtotop.classList.add("visible");
+		backtotop.classList.remove("opacity-0");
+		backtotop.classList.add("opacity-100");
+	} else {
+		chat.classList.remove("visible");
+		chat.classList.add("invisible");
+		chat.classList.remove("opacity-100");
+		chat.classList.add("opacity-0");
+
+		backtotop.classList.remove("visible");
+		backtotop.classList.add("invisible");
+		backtotop.classList.remove("opacity-100");
+		backtotop.classList.add("opacity-0");
+	}
+};
+
+window.addEventListener("load", togglesideButtons);
+window.addEventListener("scroll", togglesideButtons);
+
+backtotop.addEventListener("click", (e) => {
+	e.preventDefault();
+	window.scrollTo({
+		top: 0,
+		behavior: "smooth"
+	});
+});
+
+/**
  * Initialize Bootstrap Toasts
  */
-const toastTrigger = document.getElementById('liveToastBtn');
-const toastLiveExample = document.getElementById('liveToast');
+const toastTrigger = document.querySelectorAll("#liveToastBtn");
+const toastLiveExample = document.querySelector("#liveToast");
 
-if (toastTrigger) {
-  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
-  toastTrigger.addEventListener('click', () => {
-    toastBootstrap.show();
-  })
-}
+
+const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample);
+
+toastTrigger.forEach(trigger => {
+	trigger.addEventListener('click', () => {
+		toastBootstrap.show();
+	})
+});
+
 
 /**
  * Apply .scrolled class to the body as the page is scrolled down
