@@ -40,6 +40,19 @@ if (backtotop) {
 }
 
 /**
+ * Initialize Bootstrap Toasts
+ */
+const toastTrigger = document.getElementById('liveToastBtn');
+const toastLiveExample = document.getElementById('liveToast');
+
+if (toastTrigger) {
+  const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample)
+  toastTrigger.addEventListener('click', () => {
+    toastBootstrap.show();
+  })
+}
+
+/**
  * Apply .scrolled class to the body as the page is scrolled down
  */
 const selectBody = document.querySelector("body");
@@ -82,6 +95,46 @@ document.querySelectorAll('#navmenu a').forEach(navmenu => {
 	navmenu.addEventListener('click', () => {
 		if (document.querySelector('.mobile-nav-active')) {
 			mobileNavToogle();
+		}
+	});
+});
+
+/**
+ * Correct scrolling to hash sections.
+ */
+
+//  upon page load for URLs containing hash links.
+window.addEventListener("load", () => {
+	if (window.location.hash) {
+		if (document.querySelector(window.location.hash)) {
+			setTimeout(() => {
+				let section = document.querySelector(window.location.hash);
+				let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+				window.scrollTo({
+					top: section.offsetTop - parseInt(scrollMarginTop) - 50,
+					behavior: 'smooth'
+				});
+			}, 0);
+		}
+	}
+});
+
+//  upon page nav link clicked
+let navmenulinks = document.querySelectorAll("#navmenu ul li a")
+navmenulinks.forEach((link, index) => {
+	link.addEventListener("click", (event) => {
+		// Skip the first link which is the home link
+		if (index > 0) {
+			event.preventDefault();
+			let sectionId = link.getAttribute("href");
+			let section = document.querySelector(sectionId);
+			if (section) {
+				let scrollMarginTop = getComputedStyle(section).scrollMarginTop;
+				window.scrollTo({
+					top: section.offsetTop - parseInt(scrollMarginTop) - 50,
+					behavior: 'smooth'
+				});
+			}
 		}
 	});
 });
