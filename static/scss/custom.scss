@@ -352,7 +352,7 @@ $navbar-height: 80px;
 #hero {
     margin-top: $navbar-height;
     height: calc(100vh - $navbar-height);
-    background: url("../img/hero-bg.jpg") center center;
+    background: url("../img/bg.png") center center;
     background-size: cover;
 
 }
@@ -378,15 +378,15 @@ $navbar-height: 80px;
     background-origin: border-box;
 }
 
-#hero:after {
-    content: "";
-    background-image: radial-gradient(circle at top left, white, transparent 50%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    inset: 0;
-    z-index: 1;
-}
+// #hero:after {
+//     content: "";
+//     background-image: radial-gradient(circle at top left, white, transparent 10%);
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     inset: 0;
+//     z-index: 1;
+// }
 
 #hero .d-grid {
     width: 300px;
@@ -617,7 +617,7 @@ $navbar-height: 80px;
 }
 
 #services .icon-box:hover .title a {
-    color: var(--bs-primary);
+    color: #e94452;
 }
 
 #services .description {
@@ -763,7 +763,7 @@ $navbar-height: 80px;
 #footer {
     font-size: 14px;
     padding-bottom: 50px;
-    background-color: #f4f4f4;
+    // background-color: #f4f4f4;
 }
 
 #footer .footer-top {
@@ -807,16 +807,16 @@ $navbar-height: 80px;
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid rgba(var(--bs-dark-rgb), 0.5);
+    border: 1px solid rgba(var(--bs-light-rgb), 1);
     font-size: 16px;
-    color: rgba(var(--bs-dark-rgb), 0.5);
+    color: rgba(var(--bs-light-rgb), 1);
     margin-right: 10px;
     transition: 0.3s;
 }
 
 #footer .footer-social-links a:hover {
-    color: var(--bs-primary);
-    border-color: var(--bs-primary);
+    color: rgba(var(--bs-light-rgb), 0.5);
+    border-color: rgba(var(--bs-light-rgb), 0.5);
 }
 
 #footer h4 {

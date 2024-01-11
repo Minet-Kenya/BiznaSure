@@ -454,12 +454,12 @@
         </section>
     </main>
     <!-- ======= Footer ======= -->
-    <footer id="footer" class="pt-5 bg-light">
+    <footer id="footer" class="pt-5 bg-tertiary text-light">
         <div class="container footer-top">
             <div class="row gy-4">
                 <div class="col-lg-7 col-md-12 d-flex flex-column justify-content-center align-items-center d-lg-block footer-about">
                     <a href="index.php" class="logo d-flex align-items-center">
-                        <span>Risk. Reinsurance. People</span>
+                        <span class="text-white">Risk. Reinsurance. People</span>
                     </a>
                     <p>
                         Minet is a trusted pan-African advisor that meets the uncertainties of tomorrow by delivering
@@ -473,19 +473,19 @@
                     </div>
                 </div>
                 <div class="col-lg-2 col-6 footer-links">
-                    <h4>Useful Links</h4>
+                    <h4 class="text-white">Useful Links</h4>
                     <ul>
                         <li>
-                            <a href="index.php">Home</a>
+                            <a class="link-light" href="index.php">Home</a>
                         </li>
                         <li>
-                            <a href="index.php#about">About us</a>
+                            <a class="link-light" href="index.php#about">About us</a>
                         </li>
                         <li>
-                            <a href="index.php#services">Cover Options</a>
+                            <a class="link-light" href="index.php#services">Cover Options</a>
                         </li>
                         <li>
-                            <a href="privacy-policy.html">Privacy policy</a>
+                            <a class="link-light" href="privacy-policy.html">Privacy policy</a>
                         </li>
                     </ul>
                 </div>
@@ -526,7 +526,7 @@
                         </div>
                     -->
                 <div class="col-lg-3 col-6 footer-contact text-start">
-                    <h4>Contact Us</h4>
+                    <h4 class="text-light">Contact Us</h4>
                     <p>Minet House, Processional Way, off Nyerere Road</p>
                     <p>P.O. Box 48279-00100, GPO Nairobi</p>
                     <p>Kenya</p>
@@ -539,7 +539,7 @@
                 </div>
             </div>
         </div>
-        <div class="container copyright text-center mt-4">
+        <div class="container copyright text-center text-dark mt-4">
             <p>
                 <span>All rights reserved</span> ©️ 2023<span class="current-year"></span> <strong class="px-1">Minet
                     Group</strong>
