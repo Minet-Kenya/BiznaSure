@@ -46,9 +46,11 @@
                             <li>
                                 <a href="#services" class="link-secondary">Products & Services</a>
                             </li>
-                            <li>
-                                <a href="#media" class="link-secondary">Media</a>
-                            </li>
+                            <!--
+                                <li>
+                                    <a href="#media" class="link-secondary">Media</a>
+                                </li>
+                            -->
                             <li>
                                 <a href="#contact" class="link-secondary">Contact</a>
                             </li>
