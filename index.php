@@ -111,17 +111,25 @@
                             or Call <a href="tel:+254719044 555">0719 044 555</a>
                         </p>
                         <p>
-                            Alternatively, click the link below to connect with one of our representatives and discover
+                            Alternatively, click the link below to connect with us on WhatsApp and discover
                             how we can be of assistance to you today.
                         </p>
-                        <button type="button" id="liveToastBtn" class="btn btn-get-started">
+                        <!-- Button that toggles the live chat window to be implementd later -->
+                        <!-- 
+                            <button type="button" id="liveToastBtn" class="btn btn-get-started">
+                                <i class="bi bi-chat-fill me-3"></i>Chat with Us
+                            </button>
+                        -->
+                        <!-- For now the button will lead to whatsapp -->
+                        <a href="https://wa.me/254719044000" target="_blank" class="btn btn-get-started">
                             <i class="bi bi-chat-fill me-3"></i>Chat with Us
-                        </button>
+                        </a>
                     </div>
                     <div class="col-lg-5 order-1 order-lg-2 d-flex align-items-center justify-content-center pb-3 pb-lg-0" data-aos="zoom-out">
                         <img src="static/img/img.png" class="img-fluid support-person" width="" height="" alt="">
                     </div>
                     <!-- Live Chat Toasts -->
+                    <!-- A live chat window inside the website that's to be implemented later -->
                     <?php include "includes/chat.php" ?>
                 </div>
                 <div class="row content">
@@ -550,9 +558,17 @@
         </div>
     </footer>
     <!-- Chat -->
-    <button id="liveToastBtn" type="button" class="btn chat d-flex align-items-center justify-content-center rounded-circle position-fixed bg-primary">
+    <!-- Button that toggles the live chat window to be implementd later -->
+    <!--
+        <button id="liveToastBtn" type="button" class="btn chat d-flex align-items-center justify-content-center rounded-circle position-fixed bg-primary">
+            <i class="bi bi-chat-dots text-white fs-4 lh-0"></i> <span class="ms-2 d-none invisible text-white">Chat with us</span>
+        </button>
+    -->
+     <!-- For now the button will lead to whatsapp -->
+    <a href="https://wa.me/254719044000" target="_blank" class="btn chat d-flex align-items-center justify-content-center rounded-circle position-fixed bg-primary">
         <i class="bi bi-chat-dots text-white fs-4 lh-0"></i> <span class="ms-2 d-none invisible text-white">Chat with us</span>
-    </button>
+    </a>
+    
     <!-- Back To Top Button -->
     <a href="#" id="back-to-top" class="position-fixed bg-primary rounded-circle d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short text-white lh-0 fs-3"></i>
