@@ -44,7 +44,7 @@
                                 <a href="#about" class="link-secondary">About</a>
                             </li>
                             <li>
-                                <a href="#services" class="link-secondary">Products & Services</a>
+                                <a href="#services" class="link-secondary">Cover Options</a>
                             </li>
                             <!--
                                 <li>
