@@ -13,7 +13,7 @@ $primary: #e32636;
 $primary-rgb: 232, 69, 69;
 $secondary: #3a3939;
 $secondary-rgb: 50, 53, 58;
-$btn-close-color: #fff;
+// $btn-close-color: #fff;
 $btn-close-opacity: 1;
 
 /* Include remainder of required Bootstrap stylesheets (including any separate color mode stylesheets)
@@ -43,6 +43,7 @@ $btn-close-opacity: 1;
 @import "../vendor/bootstrap/scss/helpers";
 @import "../vendor/bootstrap/scss/toasts";
 @import "../vendor/bootstrap/scss/close";
+@import "../vendor/bootstrap/scss/modal";
 
 /* Optionally include utilities API last to generate classes based on the Sass map in `_utilities.scss`
 ------------------------------*/

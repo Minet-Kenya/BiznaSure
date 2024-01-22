@@ -4,28 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>BiznaSure</title>
     <meta name="theme-color" content="#176d6a">
     <meta name="description" content="Learn how to protect your business from various risks with Minet's comprehensive insurance solutions. Get a free quote today!">
     <meta name="keywords" content="business insurance, risk management, insurance solutions, free quote, Minet Kenya Insurance Brokers Limited, Minet Kenya">
+
     <!-- Icons -->
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
+
     <!-- CSS Files -->
     <link rel="stylesheet" href="static/vendor/bootstrap-icons/bootstrap-icons.min.css">
     <link rel="stylesheet" href="static/vendor/aos/aos.css">
     <link rel="stylesheet" href="static/vendor/glightbox/glightbox.min.css">
     <link rel="stylesheet" href="static/css/custom.css">
+
     <!-- JS Files -->
     <script defer src="static/vendor/bootstrap/bootstrap.bundle.min.js"></script>
     <script defer src="static/vendor/aos/aos.js"></script>
     <script defer src="static/vendor/glightbox/glightbox.min.js"></script>
     <script defer src="static/js/script.js"></script>
+
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navmenu">
+
     <!-- ======= Header ======= -->
     <header id="header" class="position-relative top-0 bottom-0 start-0 end-0 w-100">
+
         <!-- ======= Navigation Section ======= -->
         <div id="navbar" class="z-3 fixed-top w-100 d-flex align-items-center bg-white">
             <div class="container-fluid">
@@ -65,7 +72,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Navigation -->
+
         <!-- ======= Hero Section ======= -->
         <section id="hero" class="position-relative text-white w-100 py-0 d-flex flex-column justify-content-center">
             <div class="d-flex align-items-center justify-content-end z-1 w-100 h-100 px-5 text-end">
@@ -89,10 +96,12 @@
                 </div>
             </div>
         </section>
-        <!-- End Hero -->
+
     </header>
-    <!-- End Header -->
+
+    <!-- ======= Main ======= -->
     <main id="main">
+
         <!-- ======= About Section ======= -->
         <section id="about" class="py-5">
             <!--  Section Title -->
@@ -116,13 +125,6 @@
                             Alternatively, click the link below to connect with us on WhatsApp and discover
                             how we can be of assistance to you today.
                         </p>
-                        <!-- Button that toggles the live chat window to be implementd later -->
-                        <!-- 
-                            <button type="button" id="liveToastBtn" class="btn btn-get-started">
-                                <i class="bi bi-chat-fill me-3"></i>Chat with Us
-                            </button>
-                        -->
-                        <!-- For now the button will lead to whatsapp -->
                         <a href="https://wa.me/254719044000" target="_blank" class="btn btn-get-started">
                             <i class="bi bi-chat-fill me-3"></i>Chat with Us
                         </a>
@@ -130,9 +132,6 @@
                     <div class="col-lg-5 order-1 order-lg-2 d-flex align-items-center justify-content-center pb-3 pb-lg-0" data-aos="zoom-out">
                         <img src="static/img/img.png" class="img-fluid support-person" width="" height="" alt="">
                     </div>
-                    <!-- Live Chat Toasts -->
-                    <!-- A live chat window inside the website that's to be implemented later -->
-                    <?php include "includes/chat.php" ?>
                 </div>
                 <div class="row content">
                     <div class="col-lg-5" data-aos="fade-right">
@@ -159,7 +158,8 @@
                 </div>
             </div>
         </section>
-        <!-- Call-to-action Section - Home Page -->
+
+        <!-- ======= CTA Section ======= -->
         <section id="cta" class="position-relative py-3 text-white">
             <img src="static/img/cta-bg.jpg" width="" height="" alt="">
             <div class="container">
@@ -172,12 +172,13 @@
                                 for property, liability, theft, or interruption, we have a solution for you. Don't let
                                 uncertainty stop you from achieving your goals.
                             </p>
-                            <a class="cta-btn" href="https://forms.office.com/pages/responsepage.aspx?id=8PapkynoXkSi5UvVTKNRNPCsYyBe4YdMu8185XkaoNBUMkVNOU1UVkFaNFY0UlZHSTBHSk4yN0NCWi4u" target="_blank">Get Quotation</a>
+                            <button type="button" class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#biznasurecalc">Get Quotation</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- ======= Services Section ======= -->
         <section id="services" class="py-5">
             <!--  Section Title -->
@@ -394,6 +395,7 @@
                 </div>
             </div>
         </section>
+
         <!-- ======= CTA Section ======= -->
         <section id="cta" class="position-relative py-3 text-white">
             <img src="static/img/cta-bg.jpg" width="" height="" alt="">
@@ -408,12 +410,14 @@
                                 are tailored to your specific needs. Let us take care of the risks, so you can focus on
                                 the opportunities.
                             </p>
-                            <a class="cta-btn" href="https://forms.office.com/pages/responsepage.aspx?id=8PapkynoXkSi5UvVTKNRNPCsYyBe4YdMu8185XkaoNBUMkVNOU1UVkFaNFY0UlZHSTBHSk4yN0NCWi4u" target="_blank">Get Quotation</a>
+
+                            <button type="button" class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#biznasurecalc">Get Quotation</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
+
         <!-- ======= Contact Section ======= -->
         <section id="contact" class="pt-5 pb-4">
             <div class="container section-title text-center pb-4" data-aos="fade-up">
@@ -462,7 +466,9 @@
                 </div>
             </div>
         </section>
+
     </main>
+
     <!-- ======= Footer ======= -->
     <footer id="footer" class="pt-5 bg-tertiary text-light">
         <div class="container footer-top">
@@ -559,24 +565,39 @@
             </div>
         </div>
     </footer>
-    <!-- Chat -->
-    <!-- Button that toggles the live chat window to be implementd later -->
-    <!--
-        <button id="liveToastBtn" type="button" class="btn chat d-flex align-items-center justify-content-center rounded-circle position-fixed bg-primary">
-            <i class="bi bi-chat-dots text-white fs-4 lh-0"></i> <span class="ms-2 d-none invisible text-white">Chat with us</span>
-        </button>
-    -->
-     <!-- For now the button will lead to whatsapp -->
+
+    <!-- ======= BiznaSure Calculator Modal ======= -->
+    <div class="modal fade" id="biznasurecalc" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="biznasurecalcLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="biznasurecalcLabel">Modal title</h1>
+                    <button type="button" class="text-dark btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <?php include "biznasure_calc/index.php" ?>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Understood</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======= Chat ======= -->
     <a href="https://wa.me/254719044000" target="_blank" class="btn chat d-flex align-items-center justify-content-center rounded-circle position-fixed bg-primary">
         <i class="bi bi-chat-dots text-white fs-4 lh-0"></i> <span class="ms-2 d-none invisible text-white">Chat with us</span>
     </a>
-    
-    <!-- Back To Top Button -->
+
+    <!-- ======= Back-to-Top ======= -->
     <a href="#" id="back-to-top" class="position-fixed bg-primary rounded-circle d-flex align-items-center justify-content-center">
         <i class="bi bi-arrow-up-short text-white lh-0 fs-3"></i>
     </a>
-    <!-- Preloader -->
+
+    <!-- ======= Preloader ======= -->
     <div id="preloader" class="position-fixed bg-white top-0 bottom-0 start-0 end-0 overflow-hidden z-3"></div>
+
 </body>
 
 </html>
