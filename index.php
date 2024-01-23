@@ -10,6 +10,9 @@
     <meta name="description" content="Learn how to protect your business from various risks with Minet's comprehensive insurance solutions. Get a free quote today!">
     <meta name="keywords" content="business insurance, risk management, insurance solutions, free quote, Minet Kenya Insurance Brokers Limited, Minet Kenya">
 
+    <!-- Manifest -->
+    <link rel="manifest" href="manifest.webmanifest">
+
     <!-- Icons -->
     <link rel="shortcut icon" href="static/img/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="static/img/apple-touch-icon.png">
