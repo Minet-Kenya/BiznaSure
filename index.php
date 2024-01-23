@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>BiznaSure</title>
     <meta name="theme-color" content="#176d6a">
     <meta name="description" content="Learn how to protect your business from various risks with Minet's comprehensive insurance solutions. Get a free quote today!">
@@ -172,7 +172,7 @@
                                 for property, liability, theft, or interruption, we have a solution for you. Don't let
                                 uncertainty stop you from achieving your goals.
                             </p>
-                            <button type="button" class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#biznasurecalc">Get Quotation</button>
+                            <a href="http://52.24.81.124:8080/collaboration/portal/biznasure_calc/" class="cta-btn" target="_blank">Get Quotation</a>
                         </div>
                     </div>
                 </div>
@@ -410,8 +410,7 @@
                                 are tailored to your specific needs. Let us take care of the risks, so you can focus on
                                 the opportunities.
                             </p>
-
-                            <button type="button" class="btn cta-btn" data-bs-toggle="modal" data-bs-target="#biznasurecalc">Get Quotation</button>
+                            <a href="http://52.24.81.124:8080/collaboration/portal/biznasure_calc/" class="cta-btn" target="_blank">Get Quotation</a>
                         </div>
                     </div>
                 </div>
